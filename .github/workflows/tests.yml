@@ -22,10 +22,11 @@ jobs:
 
       - name: Compilar código fonte
         run: |
+          cd Atv
           mkdir -p out
-          javac -d out $(find src test -name "*.java")
+          javac -d out $(find src -name "*.java")
 
       - name: Executar testes (classe Main)
         run: |
-          cd out
+          cd Atv/out
           java org.example.Main
