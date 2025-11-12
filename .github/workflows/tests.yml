@@ -20,13 +20,7 @@ jobs:
           distribution: 'temurin'
           java-version: '25'
 
-      - name: Compilar código fonte
+      - name: Executar testes com Maven
         run: |
           cd Atv
-          mkdir -p out
-          javac -d out $(find src -name "*.java")
-
-      - name: Executar testes (classe Main)
-        run: |
-          cd Atv/out
-          java org.example.Main
+          mvn -B test
