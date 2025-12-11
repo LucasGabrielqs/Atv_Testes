@@ -11,11 +11,11 @@ public class Main {
 
         Identifier id = new Identifier();
 
-
         System.out.println("Começa os testes das Strings válidas:");
         for(String s: lista_valido) {
             System.out.println(id.validateIdentifier(s) ? "Válido" : "Inválido");
         }
+
 
         System.out.println("Começa os testes das Strings inválidas:");
         for (String s: lista_invalido) {
